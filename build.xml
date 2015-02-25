@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!--
+ 
+ Copyright (C) 2014 Mohammad Javad Dousti and Massoud Pedram, SPORT lab,
+ University of Southern California. All rights reserved.
+
+ Please refer to the LICENSE file for terms of use.
+
+-->
+<project basedir="." default="build" name="LEQA">
+	<property name="javacchome" value="src/libs"/>
+	<property environment="env"/>
+	
+    <path id="LEQA.classpath">
+		<fileset dir="${basedir}/">
+			<include name="src/libs/*.jar"/>
+		</fileset>	
+    </path>
+	
+    <target name="init">
+    	<javacc
+    	    target="src/edu/usc/qspr/parser/qasm/QASMParser.jj"
+    	    outputdirectory="src/edu/usc/qspr/parser/qasm"
+    	    javacchome="${javacchome}"
+    	    static="true"
+		/>
+        <javacc
+            target="src/edu/usc/qspr/parser/tfc/TFCParser.jj"
+            outputdirectory="src/edu/usc/qspr/parser/tfc"
+            javacchome="${javacchome}"
+            static="true"
+        />
+        <copy includeemptydirs="false" todir=".">
+            <fileset dir=".">
+                <exclude name="**/*.java"/>
+            </fileset>
+        </copy>
+    </target>
+    <target name="clean">
+        <delete includeEmptyDirs="true" quiet="false">
+			<fileset dir="src" includes="**/*.class"/>
+			<fileset dir="src/edu/usc/qspr/parser/qasm" includes="**/*.java"/>
+			<fileset dir="src/edu/usc/qspr/parser/tfc" includes="**/*.java"/>
+		</delete>
+		<delete file="leqa.jar" />
+    </target>
+    <target depends="clean" name="cleanall"/>
+    <target depends="init,build-project,create_jar" name="build"/>
+    <target depends="init" name="build-project">
+        <echo message="${ant.project.name}: ${ant.file}"/>
+		<javac debug="on" destdir="src" includeantruntime="false">
+            <src path="src"/>
+            <classpath refid="LEQA.classpath"/>
+			<compilerarg value="-Xlint:unchecked"/>
+        </javac>
+    </target>
+    <target depends="build-project" name="create_jar">
+        <jar destfile="leqa.jar">
+            <manifest>
+                <attribute name="Main-Class" value="org.eclipse.jdt.internal.jarinjarloader.JarRsrcLoader"/>
+                <attribute name="Rsrc-Main-Class" value="edu.usc.leqa.Main"/>
+                <attribute name="Class-Path" value="."/>
+                <attribute name="Rsrc-Class-Path" value="./ libs/jgrapht-core-0.9.0.jar libs/commons-cli-1.2.jar libs/commons-lang3-3.3.2.jar"/>
+            </manifest>
+            <zipfileset src="src/libs/jar-in-jar-loader.zip" />
+			<fileset dir="src" includes="**/*.class"/>
+            <zipfileset dir="src" includes="libs/jgrapht-core-0.9.0.jar"/>
+            <zipfileset dir="src" includes="libs/commons-cli-1.2.jar"/>
+            <zipfileset dir="src" includes="libs/commons-lang3-3.3.2.jar"/>
+        </jar>
+    </target>
+</project>

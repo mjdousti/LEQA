@@ -1,0 +1,146 @@
+/*
+ * 
+ * Copyright (C) 2014 Mohammad Javad Dousti and Massoud Pedram, SPORT lab,
+ * University of Southern California. All rights reserved.
+ * 
+ * Please refer to the LICENSE file for terms of use.
+ * 
+*/
+options
+{
+  IGNORE_CASE = true;
+  JDK_VERSION = "1.5";
+  static = true;
+}
+
+PARSER_BEGIN(QASMParser)
+package edu.usc.qspr.parser.qasm;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.util.*;
+
+import org.jgrapht.DirectedGraph;
+import org.jgrapht.graph.DefaultEdge;
+import org.jgrapht.graph.SimpleDirectedGraph;
+import edu.usc.leqa.RuntimeConfig;
+import edu.usc.qspr.layout.Layout;
+import edu.usc.qspr.qasm.*;
+
+public class QASMParser
+{
+	private static QASM qasm;
+	private static boolean firstTime=false; 
+
+	public static QASM QASMParser(String addr, Layout layout){
+		qasm=new QASM(layout);
+
+		try
+		{
+			new QASMParser(new java.io.FileInputStream(addr)).start();
+		}catch (ParseException e) {
+	      //System.err.println(":(");
+	      //System.err.println(e.printStackTrace());
+	      //e.printStackTrace();
+	      System.err.println(e.getLocalizedMessage());
+	      return null;
+	  	}catch (IOException e) {
+			System.err.println("QASM file not found!");
+			return null;
+		}
+
+//		qasm.adjustWeights();
+		return qasm;
+	}
+}
+PARSER_END(QASMParser)
+
+SKIP :
+{
+  " "
+| "\r"
+| "\t"
+| "\n"
+|  <"#" (~["\n","\r"])* ("\n" | "\r" | "\r\n")?>
+}
+
+//Reserved Words TOKEN
+TOKEN:
+{
+	< DEF:	("qubit"|"cbit") >
+	| < ONEOP: ("PrepZ"|"MeasZ"|"H"|"X"|"Y"|"Z"|"S"|"T"|"Tdag"|"T_dag"|"nop") >
+	|< TWOOP: ("cnot"|"c-z"|"c-x"|"ZZ"|"SS"|"swap"|"Utwo") >
+	|< THREEOP: ("toffoli") >
+
+}
+
+//IDENTIFIER TOKEN
+TOKEN : {
+ 	<ID: <LETTER>(<LETTER>|<DIGIT>)*>
+	|<#LETTER: (["a"-"z","A"-"Z"])>
+	|<#DIGIT : ["0"-"9"]>
+}
+
+TOKEN : /* Punctuation */
+{
+  < COMMA : "," >
+}
+
+TOKEN :
+{
+  < CONSTANT : (< DIGIT >)+ >
+}
+
+//MAIN UNIT
+	
+void start() throws IOException : {}
+{
+  (DEF())+
+  (Operation())+
+  {
+    qasm.addSentinels();
+  }
+  <EOF>
+}
+
+void Operation(): {
+}
+{
+	(ONEOP() | TWOOP())
+	{
+		qasm.incCommandNo();		
+	}
+}
+
+
+void DEF() : {Token qubitName, qubitValue=null;}
+{
+  <DEF> qubitName=<ID >(< COMMA > qubitValue=<CONSTANT>)?
+  {
+	//TODO: store the constant value somewhere
+	qasm.defineQubit(qubitName.image);
+  }
+}
+
+
+//One Operand inst.
+void ONEOP() : {
+	Token cmd, q;
+}
+{
+  ( cmd=< ONEOP >q=<ID > )
+  {
+	qasm.addOneOpInst(cmd.image, q.image);	
+  }
+}
+
+//Two operands inst.
+void TWOOP () : {
+	Token cmd, q0, q1;
+}
+{
+	cmd=<TWOOP> q0=<ID >< COMMA >q1=<ID>
+	{
+		qasm.addTwoOpInst(cmd.image, q0.image, q1.image);
+	}
+}

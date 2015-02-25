@@ -1,0 +1,653 @@
+# (c) Copyright 2004-2009 Dmitri Maslov and Igor Markov
+# Distributing this file without an express written permission or erasing this note is prohibited.
+.v x1,x2,x3,x4,x5,x6,x7,x8,x9,x10,x11,x12,x13,x14,x15,x16,x17,x18,x19,x20,x21,x22,x23,x24,x25,x26,x27,x28,x29,x30,x31,x32,x33,x34,x35,x36,x37,x38,x39,x40,x41,x42,x43,x44,x45,x46,x47,x48,x49,x50,s1,s2,s3,s4,s5,s6
+.i x1,x2,x3,x4,x5,x6,x7,x8,x9,x10,x11,x12,x13,x14,x15,x16,x17,x18,x19,x20,x21,x22,x23,x24,x25,x26,x27,x28,x29,x30,x31,x32,x33,x34,x35,x36,x37,x38,x39,x40,x41,x42,x43,x44,x45,x46,x47,x48,x49,x50
+.o x1,x2,x3,x4,x5,x6,x7,x8,x9,x10,x11,x12,x13,x14,x15,x16,x17,x18,x19,x20,x21,x22,x23,x24,x25,x26,x27,x28,x29,x30,x31,x32,x33,x34,x35,x36,x37,x38,x39,x40,x41,x42,x43,x44,x45,x46,x47,x48,x49,x50
+.c 0,02,03,04,05,06
+BEGIN
+# Cylcle6_1 application to x1 and s_i
+# t7 x1,s1,s2,s3,s4,s5,s6
+# t6 x1,s1,s2,s3,s4,s5
+# t5 x1,s1,s2,s3,s4
+# t4 x1,s1,s2,s3
+# t3 x1,s1,s2
+t2 x1,s1
+# Cylcle6_1 application to x2 and s_i
+# t7 x2,s1,s2,s3,s4,s5,s6
+# t6 x2,s1,s2,s3,s4,s5
+# t5 x2,s1,s2,s3,s4
+# t4 x2,s1,s2,s3
+t3 x2,s1,s2
+t2 x2,s1
+# Cylcle6_1 application to x3 and s_i
+# t7 x3,s1,s2,s3,s4,s5,s6
+# t6 x3,s1,s2,s3,s4,s5
+# t5 x3,s1,s2,s3,s4
+# t4 x3,s1,s2,s3
+t3 x3,s1,s2
+t2 x3,s1
+# Cylcle6_1 application to x4 and s_i
+# t7 x4,s1,s2,s3,s4,s5,s6
+# t6 x4,s1,s2,s3,s4,s5
+# t5 x4,s1,s2,s3,s4
+t4 x4,s1,s2,s3
+t3 x4,s1,s2
+t2 x4,s1
+# Cylcle6_1 application to x5 and s_i
+# t7 x5,s1,s2,s3,s4,s5,s6
+# t6 x5,s1,s2,s3,s4,s5
+# t5 x5,s1,s2,s3,s4
+t4 x5,s1,s2,s3
+t3 x5,s1,s2
+t2 x5,s1
+# Cylcle6_1 application to x6 and s_i
+# t7 x6,s1,s2,s3,s4,s5,s6
+# t6 x6,s1,s2,s3,s4,s5
+# t5 x6,s1,s2,s3,s4
+t4 x6,s1,s2,s3
+t3 x6,s1,s2
+t2 x6,s1
+# Cylcle6_1 application to x7 and s_i
+# t7 x7,s1,s2,s3,s4,s5,s6
+# t6 x7,s1,s2,s3,s4,s5
+# t5 x7,s1,s2,s3,s4
+t4 x7,s1,s2,s3
+t3 x7,s1,s2
+t2 x7,s1
+# Cylcle6_1 application to x8 and s_i
+# t7 x8,s1,s2,s3,s4,s5,s6
+# t6 x8,s1,s2,s3,s4,s5
+t5 x8,s1,s2,s3,s4
+t4 x8,s1,s2,s3
+t3 x8,s1,s2
+t2 x8,s1
+# Cylcle6_1 application to x9 and s_i
+# t7 x9,s1,s2,s3,s4,s5,s6
+# t6 x9,s1,s2,s3,s4,s5
+t5 x9,s1,s2,s3,s4
+t4 x9,s1,s2,s3
+t3 x9,s1,s2
+t2 x9,s1
+# Cylcle6_1 application to x10 and s_i
+# t7 x10,s1,s2,s3,s4,s5,s6
+# t6 x10,s1,s2,s3,s4,s5
+t5 x10,s1,s2,s3,s4
+t4 x10,s1,s2,s3
+t3 x10,s1,s2
+t2 x10,s1
+# Cylcle6_1 application to x11 and s_i
+# t7 x11,s1,s2,s3,s4,s5,s6
+# t6 x11,s1,s2,s3,s4,s5
+t5 x11,s1,s2,s3,s4
+t4 x11,s1,s2,s3
+t3 x11,s1,s2
+t2 x11,s1
+# Cylcle6_1 application to x12 and s_i
+# t7 x12,s1,s2,s3,s4,s5,s6
+# t6 x12,s1,s2,s3,s4,s5
+t5 x12,s1,s2,s3,s4
+t4 x12,s1,s2,s3
+t3 x12,s1,s2
+t2 x12,s1
+# Cylcle6_1 application to x13 and s_i
+# t7 x13,s1,s2,s3,s4,s5,s6
+# t6 x13,s1,s2,s3,s4,s5
+t5 x13,s1,s2,s3,s4
+t4 x13,s1,s2,s3
+t3 x13,s1,s2
+t2 x13,s1
+# Cylcle6_1 application to x14 and s_i
+# t7 x14,s1,s2,s3,s4,s5,s6
+# t6 x14,s1,s2,s3,s4,s5
+t5 x14,s1,s2,s3,s4
+t4 x14,s1,s2,s3
+t3 x14,s1,s2
+t2 x14,s1
+# Cylcle6_1 application to x15 and s_i
+# t7 x15,s1,s2,s3,s4,s5,s6
+# t6 x15,s1,s2,s3,s4,s5
+t5 x15,s1,s2,s3,s4
+t4 x15,s1,s2,s3
+t3 x15,s1,s2
+t2 x15,s1
+# Cylcle6_1 application to x16 and s_i
+# t7 x16,s1,s2,s3,s4,s5,s6
+t6 x16,s1,s2,s3,s4,s5
+t5 x16,s1,s2,s3,s4
+t4 x16,s1,s2,s3
+t3 x16,s1,s2
+t2 x16,s1
+# Cylcle6_1 application to x17 and s_i
+# t7 x17,s1,s2,s3,s4,s5,s6
+t6 x17,s1,s2,s3,s4,s5
+t5 x17,s1,s2,s3,s4
+t4 x17,s1,s2,s3
+t3 x17,s1,s2
+t2 x17,s1
+# Cylcle6_1 application to x18 and s_i
+# t7 x18,s1,s2,s3,s4,s5,s6
+t6 x18,s1,s2,s3,s4,s5
+t5 x18,s1,s2,s3,s4
+t4 x18,s1,s2,s3
+t3 x18,s1,s2
+t2 x18,s1
+# Cylcle6_1 application to x19 and s_i
+# t7 x19,s1,s2,s3,s4,s5,s6
+t6 x19,s1,s2,s3,s4,s5
+t5 x19,s1,s2,s3,s4
+t4 x19,s1,s2,s3
+t3 x19,s1,s2
+t2 x19,s1
+# Cylcle6_1 application to x20 and s_i
+# t7 x20,s1,s2,s3,s4,s5,s6
+t6 x20,s1,s2,s3,s4,s5
+t5 x20,s1,s2,s3,s4
+t4 x20,s1,s2,s3
+t3 x20,s1,s2
+t2 x20,s1
+# Cylcle6_1 application to x21 and s_i
+# t7 x21,s1,s2,s3,s4,s5,s6
+t6 x21,s1,s2,s3,s4,s5
+t5 x21,s1,s2,s3,s4
+t4 x21,s1,s2,s3
+t3 x21,s1,s2
+t2 x21,s1
+# Cylcle6_1 application to x22 and s_i
+# t7 x22,s1,s2,s3,s4,s5,s6
+t6 x22,s1,s2,s3,s4,s5
+t5 x22,s1,s2,s3,s4
+t4 x22,s1,s2,s3
+t3 x22,s1,s2
+t2 x22,s1
+# Cylcle6_1 application to x23 and s_i
+# t7 x23,s1,s2,s3,s4,s5,s6
+t6 x23,s1,s2,s3,s4,s5
+t5 x23,s1,s2,s3,s4
+t4 x23,s1,s2,s3
+t3 x23,s1,s2
+t2 x23,s1
+# Cylcle6_1 application to x24 and s_i
+# t7 x24,s1,s2,s3,s4,s5,s6
+t6 x24,s1,s2,s3,s4,s5
+t5 x24,s1,s2,s3,s4
+t4 x24,s1,s2,s3
+t3 x24,s1,s2
+t2 x24,s1
+# Cylcle6_1 application to x25 and s_i
+# t7 x25,s1,s2,s3,s4,s5,s6
+t6 x25,s1,s2,s3,s4,s5
+t5 x25,s1,s2,s3,s4
+t4 x25,s1,s2,s3
+t3 x25,s1,s2
+t2 x25,s1
+# Cylcle6_1 application to x26 and s_i
+# t7 x26,s1,s2,s3,s4,s5,s6
+t6 x26,s1,s2,s3,s4,s5
+t5 x26,s1,s2,s3,s4
+t4 x26,s1,s2,s3
+t3 x26,s1,s2
+t2 x26,s1
+# Cylcle6_1 application to x27 and s_i
+# t7 x27,s1,s2,s3,s4,s5,s6
+t6 x27,s1,s2,s3,s4,s5
+t5 x27,s1,s2,s3,s4
+t4 x27,s1,s2,s3
+t3 x27,s1,s2
+t2 x27,s1
+# Cylcle6_1 application to x28 and s_i
+# t7 x28,s1,s2,s3,s4,s5,s6
+t6 x28,s1,s2,s3,s4,s5
+t5 x28,s1,s2,s3,s4
+t4 x28,s1,s2,s3
+t3 x28,s1,s2
+t2 x28,s1
+# Cylcle6_1 application to x29 and s_i
+# t7 x29,s1,s2,s3,s4,s5,s6
+t6 x29,s1,s2,s3,s4,s5
+t5 x29,s1,s2,s3,s4
+t4 x29,s1,s2,s3
+t3 x29,s1,s2
+t2 x29,s1
+# Cylcle6_1 application to x30 and s_i
+# t7 x30,s1,s2,s3,s4,s5,s6
+t6 x30,s1,s2,s3,s4,s5
+t5 x30,s1,s2,s3,s4
+t4 x30,s1,s2,s3
+t3 x30,s1,s2
+t2 x30,s1
+# Cylcle6_1 application to x31 and s_i
+# t7 x31,s1,s2,s3,s4,s5,s6
+t6 x31,s1,s2,s3,s4,s5
+t5 x31,s1,s2,s3,s4
+t4 x31,s1,s2,s3
+t3 x31,s1,s2
+t2 x31,s1
+# Cylcle6_1 application to x32 and s_i
+t7 x32,s1,s2,s3,s4,s5,s6
+t6 x32,s1,s2,s3,s4,s5
+t5 x32,s1,s2,s3,s4
+t4 x32,s1,s2,s3
+t3 x32,s1,s2
+t2 x32,s1
+# Cylcle6_1 application to x33 and s_i
+t7 x33,s1,s2,s3,s4,s5,s6
+t6 x33,s1,s2,s3,s4,s5
+t5 x33,s1,s2,s3,s4
+t4 x33,s1,s2,s3
+t3 x33,s1,s2
+t2 x33,s1
+# Cylcle6_1 application to x34 and s_i
+t7 x34,s1,s2,s3,s4,s5,s6
+t6 x34,s1,s2,s3,s4,s5
+t5 x34,s1,s2,s3,s4
+t4 x34,s1,s2,s3
+t3 x34,s1,s2
+t2 x34,s1
+# Cylcle6_1 application to x35 and s_i
+t7 x35,s1,s2,s3,s4,s5,s6
+t6 x35,s1,s2,s3,s4,s5
+t5 x35,s1,s2,s3,s4
+t4 x35,s1,s2,s3
+t3 x35,s1,s2
+t2 x35,s1
+# Cylcle6_1 application to x36 and s_i
+t7 x36,s1,s2,s3,s4,s5,s6
+t6 x36,s1,s2,s3,s4,s5
+t5 x36,s1,s2,s3,s4
+t4 x36,s1,s2,s3
+t3 x36,s1,s2
+t2 x36,s1
+# Cylcle6_1 application to x37 and s_i
+t7 x37,s1,s2,s3,s4,s5,s6
+t6 x37,s1,s2,s3,s4,s5
+t5 x37,s1,s2,s3,s4
+t4 x37,s1,s2,s3
+t3 x37,s1,s2
+t2 x37,s1
+# Cylcle6_1 application to x38 and s_i
+t7 x38,s1,s2,s3,s4,s5,s6
+t6 x38,s1,s2,s3,s4,s5
+t5 x38,s1,s2,s3,s4
+t4 x38,s1,s2,s3
+t3 x38,s1,s2
+t2 x38,s1
+# Cylcle6_1 application to x39 and s_i
+t7 x39,s1,s2,s3,s4,s5,s6
+t6 x39,s1,s2,s3,s4,s5
+t5 x39,s1,s2,s3,s4
+t4 x39,s1,s2,s3
+t3 x39,s1,s2
+t2 x39,s1
+# Cylcle6_1 application to x40 and s_i
+t7 x40,s1,s2,s3,s4,s5,s6
+t6 x40,s1,s2,s3,s4,s5
+t5 x40,s1,s2,s3,s4
+t4 x40,s1,s2,s3
+t3 x40,s1,s2
+t2 x40,s1
+# Cylcle6_1 application to x41 and s_i
+t7 x41,s1,s2,s3,s4,s5,s6
+t6 x41,s1,s2,s3,s4,s5
+t5 x41,s1,s2,s3,s4
+t4 x41,s1,s2,s3
+t3 x41,s1,s2
+t2 x41,s1
+# Cylcle6_1 application to x42 and s_i
+t7 x42,s1,s2,s3,s4,s5,s6
+t6 x42,s1,s2,s3,s4,s5
+t5 x42,s1,s2,s3,s4
+t4 x42,s1,s2,s3
+t3 x42,s1,s2
+t2 x42,s1
+# Cylcle6_1 application to x43 and s_i
+t7 x43,s1,s2,s3,s4,s5,s6
+t6 x43,s1,s2,s3,s4,s5
+t5 x43,s1,s2,s3,s4
+t4 x43,s1,s2,s3
+t3 x43,s1,s2
+t2 x43,s1
+# Cylcle6_1 application to x44 and s_i
+t7 x44,s1,s2,s3,s4,s5,s6
+t6 x44,s1,s2,s3,s4,s5
+t5 x44,s1,s2,s3,s4
+t4 x44,s1,s2,s3
+t3 x44,s1,s2
+t2 x44,s1
+# Cylcle6_1 application to x45 and s_i
+t7 x45,s1,s2,s3,s4,s5,s6
+t6 x45,s1,s2,s3,s4,s5
+t5 x45,s1,s2,s3,s4
+t4 x45,s1,s2,s3
+t3 x45,s1,s2
+t2 x45,s1
+# Cylcle6_1 application to x46 and s_i
+t7 x46,s1,s2,s3,s4,s5,s6
+t6 x46,s1,s2,s3,s4,s5
+t5 x46,s1,s2,s3,s4
+t4 x46,s1,s2,s3
+t3 x46,s1,s2
+t2 x46,s1
+# Cylcle6_1 application to x47 and s_i
+t7 x47,s1,s2,s3,s4,s5,s6
+t6 x47,s1,s2,s3,s4,s5
+t5 x47,s1,s2,s3,s4
+t4 x47,s1,s2,s3
+t3 x47,s1,s2
+t2 x47,s1
+# Cylcle6_1 application to x48 and s_i
+t7 x48,s1,s2,s3,s4,s5,s6
+t6 x48,s1,s2,s3,s4,s5
+t5 x48,s1,s2,s3,s4
+t4 x48,s1,s2,s3
+t3 x48,s1,s2
+t2 x48,s1
+# Cylcle6_1 application to x49 and s_i
+t7 x49,s1,s2,s3,s4,s5,s6
+t6 x49,s1,s2,s3,s4,s5
+t5 x49,s1,s2,s3,s4
+t4 x49,s1,s2,s3
+t3 x49,s1,s2
+t2 x49,s1
+# Cylcle6_1 application to x50 and s_i
+t7 x50,s1,s2,s3,s4,s5,s6
+t6 x50,s1,s2,s3,s4,s5
+t5 x50,s1,s2,s3,s4
+t4 x50,s1,s2,s3
+t3 x50,s1,s2
+t2 x50,s1
+# Fredkins with control=s1 and swapping distance 1
+f3 s1,x1,x2
+f3 s1,x3,x4
+f3 s1,x5,x6
+f3 s1,x7,x8
+f3 s1,x9,x10
+f3 s1,x11,x12
+f3 s1,x13,x14
+f3 s1,x15,x16
+f3 s1,x17,x18
+f3 s1,x19,x20
+f3 s1,x21,x22
+f3 s1,x23,x24
+f3 s1,x25,x26
+f3 s1,x27,x28
+f3 s1,x29,x30
+f3 s1,x31,x32
+f3 s1,x33,x34
+f3 s1,x35,x36
+f3 s1,x37,x38
+f3 s1,x39,x40
+f3 s1,x41,x42
+f3 s1,x43,x44
+f3 s1,x45,x46
+f3 s1,x47,x48
+f3 s1,x49,x50
+f3 s1,x1,x3
+f3 s1,x5,x7
+f3 s1,x9,x11
+f3 s1,x13,x15
+f3 s1,x17,x19
+f3 s1,x21,x23
+f3 s1,x25,x27
+f3 s1,x29,x31
+f3 s1,x33,x35
+f3 s1,x37,x39
+f3 s1,x41,x43
+f3 s1,x45,x47
+f3 s1,x49,x1
+f3 s1,x5,x9
+f3 s1,x13,x17
+f3 s1,x21,x25
+f3 s1,x29,x33
+f3 s1,x37,x41
+f3 s1,x45,x49
+f3 s1,x5,x13
+f3 s1,x21,x29
+f3 s1,x37,x45
+f3 s1,x5,x21
+f3 s1,x37,x5
+# Fredkins with control=s2 and swapping distance 2
+f3 s2,x1,x3
+f3 s2,x2,x4
+f3 s2,x5,x7
+f3 s2,x6,x8
+f3 s2,x9,x11
+f3 s2,x10,x12
+f3 s2,x13,x15
+f3 s2,x14,x16
+f3 s2,x17,x19
+f3 s2,x18,x20
+f3 s2,x21,x23
+f3 s2,x22,x24
+f3 s2,x25,x27
+f3 s2,x26,x28
+f3 s2,x29,x31
+f3 s2,x30,x32
+f3 s2,x33,x35
+f3 s2,x34,x36
+f3 s2,x37,x39
+f3 s2,x38,x40
+f3 s2,x41,x43
+f3 s2,x42,x44
+f3 s2,x45,x47
+f3 s2,x46,x48
+f3 s2,x49,x1
+f3 s2,x50,x2
+f3 s2,x5,x9
+f3 s2,x6,x10
+f3 s2,x13,x17
+f3 s2,x14,x18
+f3 s2,x21,x25
+f3 s2,x22,x26
+f3 s2,x29,x33
+f3 s2,x30,x34
+f3 s2,x37,x41
+f3 s2,x38,x42
+f3 s2,x45,x49
+f3 s2,x46,x50
+f3 s2,x5,x13
+f3 s2,x6,x14
+f3 s2,x21,x29
+f3 s2,x22,x30
+f3 s2,x37,x45
+f3 s2,x38,x46
+f3 s2,x5,x21
+f3 s2,x6,x22
+f3 s2,x37,x5
+f3 s2,x38,x6
+# Fredkins with control=s3 and swapping distance 4
+f3 s3,x1,x5
+f3 s3,x2,x6
+f3 s3,x3,x7
+f3 s3,x4,x8
+f3 s3,x9,x13
+f3 s3,x10,x14
+f3 s3,x11,x15
+f3 s3,x12,x16
+f3 s3,x17,x21
+f3 s3,x18,x22
+f3 s3,x19,x23
+f3 s3,x20,x24
+f3 s3,x25,x29
+f3 s3,x26,x30
+f3 s3,x27,x31
+f3 s3,x28,x32
+f3 s3,x33,x37
+f3 s3,x34,x38
+f3 s3,x35,x39
+f3 s3,x36,x40
+f3 s3,x41,x45
+f3 s3,x42,x46
+f3 s3,x43,x47
+f3 s3,x44,x48
+f3 s3,x49,x3
+f3 s3,x50,x4
+f3 s3,x1,x9
+f3 s3,x2,x10
+f3 s3,x11,x19
+f3 s3,x12,x20
+f3 s3,x17,x25
+f3 s3,x18,x26
+f3 s3,x27,x35
+f3 s3,x28,x36
+f3 s3,x33,x41
+f3 s3,x34,x42
+f3 s3,x43,x1
+f3 s3,x44,x2
+f3 s3,x49,x11
+f3 s3,x50,x12
+f3 s3,x17,x33
+f3 s3,x18,x34
+f3 s3,x27,x43
+f3 s3,x28,x44
+f3 s3,x49,x27
+f3 s3,x50,x28
+f3 s3,x17,x49
+f3 s3,x18,x50
+# Fredkins with control=s4 and swapping distance 8
+f3 s4,x1,x9
+f3 s4,x2,x10
+f3 s4,x3,x11
+f3 s4,x4,x12
+f3 s4,x5,x13
+f3 s4,x6,x14
+f3 s4,x7,x15
+f3 s4,x8,x16
+f3 s4,x17,x25
+f3 s4,x18,x26
+f3 s4,x19,x27
+f3 s4,x20,x28
+f3 s4,x21,x29
+f3 s4,x22,x30
+f3 s4,x23,x31
+f3 s4,x24,x32
+f3 s4,x33,x41
+f3 s4,x34,x42
+f3 s4,x35,x43
+f3 s4,x36,x44
+f3 s4,x37,x45
+f3 s4,x38,x46
+f3 s4,x39,x47
+f3 s4,x40,x48
+f3 s4,x49,x7
+f3 s4,x50,x8
+f3 s4,x1,x17
+f3 s4,x2,x18
+f3 s4,x3,x19
+f3 s4,x4,x20
+f3 s4,x5,x21
+f3 s4,x6,x22
+f3 s4,x23,x39
+f3 s4,x24,x40
+f3 s4,x33,x49
+f3 s4,x34,x50
+f3 s4,x35,x1
+f3 s4,x36,x2
+f3 s4,x37,x3
+f3 s4,x38,x4
+f3 s4,x5,x37
+f3 s4,x6,x38
+f3 s4,x23,x5
+f3 s4,x24,x6
+f3 s4,x33,x23
+f3 s4,x34,x24
+f3 s4,x35,x33
+f3 s4,x36,x34
+# Fredkins with control=s5 and swapping distance 16
+f3 s5,x1,x17
+f3 s5,x2,x18
+f3 s5,x3,x19
+f3 s5,x4,x20
+f3 s5,x5,x21
+f3 s5,x6,x22
+f3 s5,x7,x23
+f3 s5,x8,x24
+f3 s5,x9,x25
+f3 s5,x10,x26
+f3 s5,x11,x27
+f3 s5,x12,x28
+f3 s5,x13,x29
+f3 s5,x14,x30
+f3 s5,x15,x31
+f3 s5,x16,x32
+f3 s5,x33,x49
+f3 s5,x34,x50
+f3 s5,x35,x1
+f3 s5,x36,x2
+f3 s5,x37,x3
+f3 s5,x38,x4
+f3 s5,x39,x5
+f3 s5,x40,x6
+f3 s5,x41,x7
+f3 s5,x42,x8
+f3 s5,x43,x9
+f3 s5,x44,x10
+f3 s5,x45,x11
+f3 s5,x46,x12
+f3 s5,x47,x13
+f3 s5,x48,x14
+f3 s5,x15,x47
+f3 s5,x16,x48
+f3 s5,x33,x15
+f3 s5,x34,x16
+f3 s5,x35,x33
+f3 s5,x36,x34
+f3 s5,x37,x35
+f3 s5,x38,x36
+f3 s5,x39,x37
+f3 s5,x40,x38
+f3 s5,x41,x39
+f3 s5,x42,x40
+f3 s5,x43,x41
+f3 s5,x44,x42
+f3 s5,x45,x43
+f3 s5,x46,x44
+# Fredkins with control=s6 and swapping distance 32
+f3 s6,x1,x33
+f3 s6,x2,x34
+f3 s6,x3,x35
+f3 s6,x4,x36
+f3 s6,x5,x37
+f3 s6,x6,x38
+f3 s6,x7,x39
+f3 s6,x8,x40
+f3 s6,x9,x41
+f3 s6,x10,x42
+f3 s6,x11,x43
+f3 s6,x12,x44
+f3 s6,x13,x45
+f3 s6,x14,x46
+f3 s6,x15,x47
+f3 s6,x16,x48
+f3 s6,x17,x49
+f3 s6,x18,x50
+f3 s6,x19,x1
+f3 s6,x20,x2
+f3 s6,x21,x3
+f3 s6,x22,x4
+f3 s6,x23,x5
+f3 s6,x24,x6
+f3 s6,x25,x7
+f3 s6,x26,x8
+f3 s6,x27,x9
+f3 s6,x28,x10
+f3 s6,x29,x11
+f3 s6,x30,x12
+f3 s6,x31,x13
+f3 s6,x32,x14
+f3 s6,x15,x29
+f3 s6,x16,x30
+f3 s6,x17,x31
+f3 s6,x18,x32
+f3 s6,x19,x15
+f3 s6,x20,x16
+f3 s6,x21,x17
+f3 s6,x22,x18
+f3 s6,x23,x19
+f3 s6,x24,x20
+f3 s6,x25,x21
+f3 s6,x26,x22
+f3 s6,x27,x23
+f3 s6,x28,x24
+f3 s6,x25,x27
+f3 s6,x26,x28
+END

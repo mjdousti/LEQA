@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gridConfig>
+	<numXPatterns>60</numXPatterns>
+	<numYPatterns>60</numYPatterns>
+	<pattern>
+		<rows>2</rows>
+		<cols>2</cols>
+		<row>
+			<col>interaction</col>
+			<col>basic</col>
+		</row>
+		<row>
+			<col>basic</col>
+			<col>junction</col>
+		</row>
+	</pattern>
+</gridConfig>
+
