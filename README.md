@@ -4,7 +4,7 @@
 LEQA is a fast latency estimation tool for evaluating the performance of a quantum algorithm mapped to a quantum fabric. The actual quantum algorithm latency can be computed by performing detailed scheduling, placement and routing of the quantum instructions and qubits in a quantum operation dependency graph on a quantum circuit fabric. This is, however, a very expensive proposition that requires large amounts of processing time. Instead, LEQA, which is based on computing the neighborhood population counts of qubits, can produce estimates of the circuit latency with good accuracy (i.e., an average of less than 3% error) with up to two orders of magnitude speedup for mid-size benchmarks. This speedup is expected to increase super-linearly as a function of circuit size (operation count).
 
 
-Directories & Files Structure
+## Directories & Files Structure
 ```
 LEQA
 |-- sample_inputs
@@ -89,6 +89,7 @@ The provided tool is fully tested on a server machine with the following specifi
  - OS: Debian Wheezy (Debian 7) AMD64 edition
  - CPU: Intel Core i7-3770 CPU @ 3.40GHz
  - Memory: 8 GB
+
 **Note:** We have tested LEQA in Windows 7 and it worked flawlessly.
 
 Output:
