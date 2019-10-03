@@ -107,11 +107,11 @@ Speed up:              6.87
 ```
 
 ## Developers
-* [Mohammad Javad Dousti](<dousti@usc.edu>)
-* [Massoud Pedram](<pedram@usc.edu>)
+* Mohammad Javad Dousti (<dousti@usc.edu>)
+* Massoud Pedram (<pedram@usc.edu>)
 
 ## Questions or Bugs?
-You may contact [Mohammad Javad Dousti](<dousti@usc.edu>) for any questions you may have or bugs that you find.
+You may contact  Mohammad Javad Dousti (<dousti@usc.edu>) for any questions you may have or bugs that you find.
 
 ## License
 Please refer to the [LICENSE](LICENSE) file.
